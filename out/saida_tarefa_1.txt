@@ -1,0 +1,35 @@
+
+1. Executar os três algoritmos de clustering sobre o dataset, variando o número de grupos (k) de 2 a 3
+
+2. Visualizar os resultados através de gráficos
+
+3. Fazer a validação dos grupos através da utilização dos índices (Davies Bouldin e Silhouette)
+Model	Bouldin	Silhouette
+AgglomerativeClustering (k = 2)	0.7330018210488929	0.5532678504628996
+AgglomerativeClustering (k = 3)	0.6041813066360704	0.5281675826566276
+KMeans (k = 2)	0.7133822795826191	0.5687897205830247
+KMeans (k = 3)	0.6680978941351273	0.5104287492214447
+GaussianMixture (k = 2)	0.8604650094596924	0.3919496047300402
+GaussianMixture (k = 3)	0.7379219639790152	0.4240572985480604
+
+4. Mostrar os resultados de ambos os índices para os agrupamentos criados
+
+--------------------------------------------------------------------------
+Modelo	                            Bouldin	            Silhouette
+--------------------------------------------------------------------------
+AgglomerativeClustering (k = 2)	    0.7330018210488929	0.5532678504628996
+KMeans (k = 2)	                    0.7133822795826191	0.5687897205830247
+GaussianMixture (k = 2)	            0.8604650094596924	0.3919496047300402
+
+AgglomerativeClustering (k = 3)	    0.6041813066360704	0.5281675826566276
+KMeans (k = 3)	                    0.6680978941351275	0.5104287492214447
+GaussianMixture (k = 3)	            0.7379219639790152	0.4240572985480604
+--------------------------------------------------------------------------
+
+
+5. Analisar os resultados obtidos
+
+Quanto maior o silhouette, melhor é o resultado. Já o DB, é o contrário. 
+Dessa forma para k=2, o KMeans obteve melhor resultado e o GaussianMixture o pior.
+Já para k = 3, o AgglomerativeClustering foi o melhor e o GaussianMixture permaneceu como a pior solução.
+

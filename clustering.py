@@ -39,7 +39,7 @@ for m in models:
 
     plt.title(t)
    
-    plt.savefig(t+'.png')
+    plt.savefig('out/'+t+'.png')
     plt.clf()
 
 
