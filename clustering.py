@@ -8,7 +8,6 @@ from sklearn.decomposition import PCA
 import matplotlib.pyplot as plt
 import pandas as pd
 
-
 # Lêr dataframe
 df = pd.read_csv('csv/Diabetes.csv',encoding='utf-8')
 
@@ -32,16 +31,11 @@ print('\n2. Visualizar os resultados através de gráficos')
 for m in models:
     predicts = m['m'].fit_predict(X)
     t = m['t']
-
     X_PCA = PCA(n_components=2).fit_transform(X)
-
     plt.scatter(X_PCA[:, 0], X_PCA[:, 1], c=predicts, s=50, cmap='rainbow',alpha=0.5)
-
     plt.title(t)
-   
     plt.savefig('out/'+t+'.png')
     plt.clf()
-
 
 print('\n3. Fazer a validação dos grupos através da utilização dos índices (Davies Bouldin e Silhouette)')
 
